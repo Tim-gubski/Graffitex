@@ -18,6 +18,6 @@ struct ColorPick: View {
                 .offset(x: 15)
         }
         .frame(width: 60)
-        .background(bgColor)
+//        .background(bgColor)
     }
 }
