@@ -12,6 +12,7 @@
 		224A432528D61862008BEADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224A432428D61862008BEADC /* Assets.xcassets */; };
 		224A432828D61862008BEADC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224A432728D61862008BEADC /* Preview Assets.xcassets */; };
 		2261F0A628D626430018DB5D /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261F0A528D626430018DB5D /* ButtonBar.swift */; };
+		228FB93628D676A5009BAE57 /* SpraySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 228FB93528D676A5009BAE57 /* SpraySound.mp3 */; };
 		368BF67428D642B0003B6304 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67328D642B0003B6304 /* Slider.swift */; };
 		368BF67628D660EA003B6304 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67528D660EA003B6304 /* ColorPicker.swift */; };
 		A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F5C6228D61E58008D1427 /* Coordinator.swift */; };
@@ -24,6 +25,7 @@
 		224A432428D61862008BEADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224A432728D61862008BEADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2261F0A528D626430018DB5D /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
+		228FB93528D676A5009BAE57 /* SpraySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpraySound.mp3; sourceTree = "<group>"; };
 		368BF67328D642B0003B6304 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		368BF67528D660EA003B6304 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		A14F5C6228D61E58008D1427 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -59,8 +61,9 @@
 		224A431D28D61861008BEADC /* GraffitexApp */ = {
 			isa = PBXGroup;
 			children = (
-				2261F0A428D625CB0018DB5D /* Model */,
 				224A431E28D61861008BEADC /* AppDelegate.swift */,
+				228FB93428D6767E009BAE57 /* Audio */,
+				2261F0A428D625CB0018DB5D /* Model */,
 				A14F5C6428D61E6B008D1427 /* Extensions */,
 				A14F5C6528D61E74008D1427 /* Views */,
 				A14F5C5F28D61D26008D1427 /* Components */,
@@ -85,6 +88,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		228FB93428D6767E009BAE57 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				228FB93528D676A5009BAE57 /* SpraySound.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		A14F5C5F28D61D26008D1427 /* Components */ = {
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				224A432828D61862008BEADC /* Preview Assets.xcassets in Resources */,
+				228FB93628D676A5009BAE57 /* SpraySound.mp3 in Resources */,
 				224A432528D61862008BEADC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

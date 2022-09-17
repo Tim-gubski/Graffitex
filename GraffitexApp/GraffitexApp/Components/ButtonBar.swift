@@ -1,10 +1,12 @@
 import SwiftUI
 import CoreHaptics
+import AVKit
 
 struct ButtonBarUpper: View {
     
     @State private var engine : CHHapticEngine?
     @State private var player : CHHapticPatternPlayer?
+    @State private var audioPlayer : AVAudioPlayer?
     @State private var vibrating = false
     
     var body: some View {
@@ -19,6 +21,7 @@ struct ButtonBarUpper: View {
                         if(!vibrating){
                             vibrating = true
                             vibrate()
+                            startAudio()
                             print("starting vibration")
                         }
                     })
@@ -26,6 +29,7 @@ struct ButtonBarUpper: View {
                         do {
                             if(vibrating){
                                 try player?.stop(atTime: CHHapticTimeImmediate)
+                                try audioPlayer?.stop()
                                 vibrating = false
                                 print("killing vibration")
                             }
@@ -44,6 +48,35 @@ struct ButtonBarUpper: View {
         .background(Color.white.opacity(0.0))
         .opacity(0.87)
         .onAppear(perform:prepareHaptics)
+    }
+    
+    func startAudio(){
+        // Load a local sound file
+        guard let soundFileURL = Bundle.main.url(
+            forResource: "SpraySound",
+            withExtension: "mp3"
+        ) else {
+            return
+        }
+        
+        do {
+            // Configure and activate the AVAudioSession
+            try AVAudioSession.sharedInstance().setCategory(
+                AVAudioSession.Category.playback
+            )
+
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            // Play a sound
+            audioPlayer = try AVAudioPlayer(
+                contentsOf: soundFileURL
+            )
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.play()
+        }
+        catch {
+            print("error \(error.localizedDescription)")
+        }
     }
     
     func prepareHaptics(){
