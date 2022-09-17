@@ -21,6 +21,6 @@ struct Slide: View {
 //                Slider(value: $sliderValue, in: 0...20)
 //                //Text("Current slider value: \(sliderValue, specifier: "%.2f")")
 //            }.padding()
-        }
+        }.offset(x: -10)
     }
 }

@@ -37,7 +37,7 @@ struct ButtonBarUpper: View {
             )
             
         }
-        //.padding(.bottom, 15)
+        .padding(.bottom, 15)
         .font(.system(size: 100))
         .foregroundColor(.white)
         .frame(width: UIScreen.main.bounds.width, height: 80, alignment: .center)
@@ -116,7 +116,7 @@ struct ButtonBarLower: View {
 //                Image(systemName: "plus.diamond")
 //            }
         }
-        .padding(.bottom, 15)
+        .padding(.bottom, 45)
         .font(.system(size: 55))
         .foregroundColor(.white)
         .frame(width: UIScreen.main.bounds.width, height: 80, alignment: .center)

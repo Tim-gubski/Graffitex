@@ -12,9 +12,12 @@ struct ColorPick: View {
 
     var body: some View {
         VStack {
-            ColorPicker("Set the background color", selection: $bgColor)
+            ColorPicker("", selection: $bgColor)
+                .labelsHidden()
+                .scaleEffect(CGSize(width: 1.6, height: 1.6))
+                .offset(x: 15)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(width: 60)
         .background(bgColor)
     }
 }
