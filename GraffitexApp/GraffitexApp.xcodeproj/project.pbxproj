@@ -11,6 +11,7 @@
 		224A432128D61861008BEADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A432028D61861008BEADC /* ContentView.swift */; };
 		224A432528D61862008BEADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224A432428D61862008BEADC /* Assets.xcassets */; };
 		224A432828D61862008BEADC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224A432728D61862008BEADC /* Preview Assets.xcassets */; };
+		2261F0A628D626430018DB5D /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261F0A528D626430018DB5D /* ButtonBar.swift */; };
 		A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F5C6228D61E58008D1427 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		224A432028D61861008BEADC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		224A432428D61862008BEADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224A432728D61862008BEADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2261F0A528D626430018DB5D /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
 		A14F5C6228D61E58008D1427 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,7 @@
 		224A431D28D61861008BEADC /* GraffitexApp */ = {
 			isa = PBXGroup;
 			children = (
+				2261F0A428D625CB0018DB5D /* Model */,
 				224A431E28D61861008BEADC /* AppDelegate.swift */,
 				A14F5C6428D61E6B008D1427 /* Extensions */,
 				A14F5C6528D61E74008D1427 /* Views */,
@@ -71,6 +74,13 @@
 				224A432728D61862008BEADC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2261F0A428D625CB0018DB5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A14F5C5F28D61D26008D1427 /* Components */ = {
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				224A432028D61861008BEADC /* ContentView.swift */,
+				2261F0A528D626430018DB5D /* ButtonBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 				224A432128D61861008BEADC /* ContentView.swift in Sources */,
 				224A431F28D61861008BEADC /* AppDelegate.swift in Sources */,
 				A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */,
+				2261F0A628D626430018DB5D /* ButtonBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GraffitexApp/Preview Content\"";
-				DEVELOPMENT_TEAM = FM64238BM3;
+				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -342,7 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GraffitexApp/Preview Content\"";
-				DEVELOPMENT_TEAM = FM64238BM3;
+				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

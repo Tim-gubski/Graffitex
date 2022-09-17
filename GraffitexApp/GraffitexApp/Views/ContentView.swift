@@ -10,7 +10,15 @@ import RealityKit
 
 struct ContentView : View {
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        return ZStack {
+            ARViewContainer().edgesIgnoringSafeArea(.all)
+            VStack {
+                Spacer()
+                ButtonBar()
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
+//
     }
 }
 
