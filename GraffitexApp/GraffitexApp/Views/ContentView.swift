@@ -14,7 +14,8 @@ struct ContentView : View {
             ARViewContainer().edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
-                ButtonBar()
+                ButtonBarUpper()
+                ButtonBarLower()
             }
         }
         .edgesIgnoringSafeArea(.all)
