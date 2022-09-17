@@ -4,25 +4,24 @@ struct ButtonBar: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 50) {
-            
-            Button { // Decrement Button
-//                count.num -= 1
-                print("Button 1 Clicked")
-            } label: {
+            Button(action: {
+                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                impactMed.impactOccurred()
+            }) {
                 Image(systemName: "minus.diamond")
             }
 
-            Button { // Reset Button
-//                count.num = 0
-                print("Button 2 Clicked")
-            } label: {
+            Button(action: {
+                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                impactMed.impactOccurred()
+            }) {
                 Image(systemName: "xmark.diamond.fill")
             }
             
-            Button { // Increment Button
-//                count.num += 1
-                print("Button 3 CLicked")
-            } label: {
+            Button(action: {
+                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                impactMed.impactOccurred()
+            }) {
                 Image(systemName: "plus.diamond")
             }
         }
