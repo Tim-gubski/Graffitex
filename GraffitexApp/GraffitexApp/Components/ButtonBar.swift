@@ -28,7 +28,7 @@ struct ButtonBarUpper: View {
                             vibrate()
                             startAudio()
                             picName = "SprayCan_Transparent_pressed"
-                            print("starting vibration")
+                            print("starting vibration ")
                         }
                     })
                     .onEnded({ _ in
