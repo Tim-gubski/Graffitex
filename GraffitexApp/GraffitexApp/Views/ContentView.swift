@@ -175,7 +175,14 @@ extension ARView {
         
         modelEntity.generateCollisionShapes(recursive: true)
         
-        let anchorEntity = AnchorEntity(world:self.cameraTransform.matrix)
+        let translate = float4x4(
+                [1,0,0,0],
+                [0,1,0,0],
+                [0,0,1,0],
+                [0,0,-1,1]
+              )
+        
+        let anchorEntity = AnchorEntity(world:self.cameraTransform.matrix*translate)
         anchorEntity.addChild(modelEntity)
 //        print()
         self.scene.addAnchor(anchorEntity)
