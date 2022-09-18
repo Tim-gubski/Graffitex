@@ -15,6 +15,8 @@
 		228FB93628D676A5009BAE57 /* SpraySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 228FB93528D676A5009BAE57 /* SpraySound.mp3 */; };
 		368BF67428D642B0003B6304 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67328D642B0003B6304 /* Slider.swift */; };
 		368BF67628D660EA003B6304 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67528D660EA003B6304 /* ColorPicker.swift */; };
+		368BF67828D69680003B6304 /* SprayCan_Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 368BF67728D69680003B6304 /* SprayCan_Transparent.png */; };
+		368BF67A28D69688003B6304 /* SprayCan_Transparent_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 368BF67928D69688003B6304 /* SprayCan_Transparent_pressed.png */; };
 		A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F5C6228D61E58008D1427 /* Coordinator.swift */; };
 		CECE0BE428D688020048C538 /* ballMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0BE328D688020048C538 /* ballMotion.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		228FB93528D676A5009BAE57 /* SpraySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpraySound.mp3; sourceTree = "<group>"; };
 		368BF67328D642B0003B6304 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		368BF67528D660EA003B6304 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		368BF67728D69680003B6304 /* SprayCan_Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SprayCan_Transparent.png; path = ../../../SprayCan_Transparent.png; sourceTree = "<group>"; };
+		368BF67928D69688003B6304 /* SprayCan_Transparent_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SprayCan_Transparent_pressed.png; path = ../../../SprayCan_Transparent_pressed.png; sourceTree = "<group>"; };
 		A14F5C6228D61E58008D1427 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CECE0BE328D688020048C538 /* ballMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ballMotion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,8 @@
 				A14F5C6528D61E74008D1427 /* Views */,
 				A14F5C5F28D61D26008D1427 /* Components */,
 				224A432428D61862008BEADC /* Assets.xcassets */,
+				368BF67728D69680003B6304 /* SprayCan_Transparent.png */,
+				368BF67928D69688003B6304 /* SprayCan_Transparent_pressed.png */,
 				A14F5C6128D61D39008D1427 /* Resources */,
 				A14F5C6028D61D31008D1427 /* Coordinators */,
 				224A432628D61862008BEADC /* Preview Content */,
@@ -207,7 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368BF67A28D69688003B6304 /* SprayCan_Transparent_pressed.png in Resources */,
 				224A432828D61862008BEADC /* Preview Assets.xcassets in Resources */,
+				368BF67828D69680003B6304 /* SprayCan_Transparent.png in Resources */,
 				228FB93628D676A5009BAE57 /* SpraySound.mp3 in Resources */,
 				224A432528D61862008BEADC /* Assets.xcassets in Resources */,
 			);
@@ -355,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GraffitexApp/Preview Content\"";
-				DEVELOPMENT_TEAM = GS638249K2;
+				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -370,7 +378,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp2022;
+				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -386,7 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GraffitexApp/Preview Content\"";
-				DEVELOPMENT_TEAM = GS638249K2;
+				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -401,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp2022;
+				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
