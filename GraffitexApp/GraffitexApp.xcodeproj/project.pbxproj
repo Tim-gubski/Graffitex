@@ -16,6 +16,7 @@
 		368BF67428D642B0003B6304 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67328D642B0003B6304 /* Slider.swift */; };
 		368BF67628D660EA003B6304 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67528D660EA003B6304 /* ColorPicker.swift */; };
 		A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F5C6228D61E58008D1427 /* Coordinator.swift */; };
+		CECE0BE428D688020048C538 /* ballMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0BE328D688020048C538 /* ballMotion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		368BF67328D642B0003B6304 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		368BF67528D660EA003B6304 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		A14F5C6228D61E58008D1427 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CECE0BE328D688020048C538 /* ballMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ballMotion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		224A431D28D61861008BEADC /* GraffitexApp */ = {
 			isa = PBXGroup;
 			children = (
+				CECE0BE228D687D90048C538 /* SteelBallMotion */,
 				224A431E28D61861008BEADC /* AppDelegate.swift */,
 				228FB93428D6767E009BAE57 /* Audio */,
 				2261F0A428D625CB0018DB5D /* Model */,
@@ -138,6 +141,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CECE0BE228D687D90048C538 /* SteelBallMotion */ = {
+			isa = PBXGroup;
+			children = (
+				CECE0BE328D688020048C538 /* ballMotion.swift */,
+			);
+			path = SteelBallMotion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +222,7 @@
 			files = (
 				224A432128D61861008BEADC /* ContentView.swift in Sources */,
 				224A431F28D61861008BEADC /* AppDelegate.swift in Sources */,
+				CECE0BE428D688020048C538 /* ballMotion.swift in Sources */,
 				A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */,
 				2261F0A628D626430018DB5D /* ButtonBar.swift in Sources */,
 				368BF67428D642B0003B6304 /* Slider.swift in Sources */,
