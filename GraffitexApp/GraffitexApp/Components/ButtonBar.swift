@@ -21,12 +21,10 @@ struct ButtonBarUpper: View {
             }.simultaneousGesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ _ in
-<<<<<<< Updated upstream
                         startSpraying()
                     })
                     .onEnded({ _ in
                         stopSpraying()
-=======
                         if(!vibrating){
                             vibrating = true
                             vibrate()
@@ -48,7 +46,6 @@ struct ButtonBarUpper: View {
                             print("Error stopping the continuous haptic player: \(error)")
                         }
 //                        print("unclicked")
->>>>>>> Stashed changes
                     })
             )
             
