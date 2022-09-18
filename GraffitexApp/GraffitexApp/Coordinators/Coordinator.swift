@@ -25,15 +25,15 @@ class Coordinator: NSObject {
         let tapLocation = recognizer.location(in: view)
         let results = view.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .any)
         
-        if let result = results.first {
-            
-            let anchorEntity = AnchorEntity(raycastResult: result)
-            let modelEntity = ModelEntity(mesh: MeshResource.generateBox(width: 0.7, height: 0.01, depth: 0.6))
-            modelEntity.generateCollisionShapes(recursive: true)
-            modelEntity.model?.materials = [SimpleMaterial(color: .white, isMetallic: false)]
-            anchorEntity.addChild(modelEntity)
-            view.scene.addAnchor(anchorEntity)
-            view.installGestures(.all ,for: modelEntity)
-        }
+//        if let result = results.first {
+//
+//            let anchorEntity = AnchorEntity(raycastResult: result)
+//            let modelEntity = ModelEntity(mesh: MeshResource.generateBox(width: 0.7, height: 0.01, depth: 0.6))
+//            modelEntity.generateCollisionShapes(recursive: true)
+//            modelEntity.model?.materials = [SimpleMaterial(color: .white, isMetallic: false)]
+//            anchorEntity.addChild(modelEntity)
+//            view.scene.addAnchor(anchorEntity)
+//            view.installGestures(.all ,for: modelEntity)
+//        }
     }
 }

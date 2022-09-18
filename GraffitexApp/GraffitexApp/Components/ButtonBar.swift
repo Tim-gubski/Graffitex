@@ -21,10 +21,6 @@ struct ButtonBarUpper: View {
             }.simultaneousGesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ _ in
-                        startSpraying()
-                    })
-                    .onEnded({ _ in
-                        stopSpraying()
                         if(!vibrating){
                             vibrating = true
                             vibrate()
@@ -60,6 +56,7 @@ struct ButtonBarUpper: View {
     }
     
     func startSpraying(){
+        
         if(!vibrating){
             vibrating = true
             vibrate()

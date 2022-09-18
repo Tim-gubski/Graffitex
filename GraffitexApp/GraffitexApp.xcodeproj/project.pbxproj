@@ -13,10 +13,11 @@
 		224A432828D61862008BEADC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224A432728D61862008BEADC /* Preview Assets.xcassets */; };
 		2261F0A628D626430018DB5D /* ButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261F0A528D626430018DB5D /* ButtonBar.swift */; };
 		228FB93628D676A5009BAE57 /* SpraySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 228FB93528D676A5009BAE57 /* SpraySound.mp3 */; };
+		22C54D9B28D6B37700E91832 /* SprayCan Transparent pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C54D9A28D6B37700E91832 /* SprayCan Transparent pressed.png */; };
+		22C54D9D28D6B37F00E91832 /* SprayCan Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C54D9C28D6B37F00E91832 /* SprayCan Transparent.png */; };
+		22C54D9F28D6B3ED00E91832 /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C54D9E28D6B3ED00E91832 /* DrawingScreen.swift */; };
 		368BF67428D642B0003B6304 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67328D642B0003B6304 /* Slider.swift */; };
 		368BF67628D660EA003B6304 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF67528D660EA003B6304 /* ColorPicker.swift */; };
-		368BF67828D69680003B6304 /* SprayCan_Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 368BF67728D69680003B6304 /* SprayCan_Transparent.png */; };
-		368BF67A28D69688003B6304 /* SprayCan_Transparent_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 368BF67928D69688003B6304 /* SprayCan_Transparent_pressed.png */; };
 		A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F5C6228D61E58008D1427 /* Coordinator.swift */; };
 		CECE0BE428D688020048C538 /* ballMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0BE328D688020048C538 /* ballMotion.swift */; };
 /* End PBXBuildFile section */
@@ -27,12 +28,13 @@
 		224A432028D61861008BEADC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		224A432428D61862008BEADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224A432728D61862008BEADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2261F0A528D626430018DB5D /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBar.swift; sourceTree = "<group>"; };
+		2261F0A528D626430018DB5D /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonBar.swift; path = ../Components/ButtonBar.swift; sourceTree = "<group>"; };
 		228FB93528D676A5009BAE57 /* SpraySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpraySound.mp3; sourceTree = "<group>"; };
+		22C54D9A28D6B37700E91832 /* SprayCan Transparent pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SprayCan Transparent pressed.png"; sourceTree = "<group>"; };
+		22C54D9C28D6B37F00E91832 /* SprayCan Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SprayCan Transparent.png"; sourceTree = "<group>"; };
+		22C54D9E28D6B3ED00E91832 /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
 		368BF67328D642B0003B6304 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		368BF67528D660EA003B6304 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
-		368BF67728D69680003B6304 /* SprayCan_Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SprayCan_Transparent.png; path = ../../../SprayCan_Transparent.png; sourceTree = "<group>"; };
-		368BF67928D69688003B6304 /* SprayCan_Transparent_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SprayCan_Transparent_pressed.png; path = ../../../SprayCan_Transparent_pressed.png; sourceTree = "<group>"; };
 		A14F5C6228D61E58008D1427 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CECE0BE328D688020048C538 /* ballMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ballMotion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,8 @@
 		224A431D28D61861008BEADC /* GraffitexApp */ = {
 			isa = PBXGroup;
 			children = (
+				22C54D9A28D6B37700E91832 /* SprayCan Transparent pressed.png */,
+				22C54D9C28D6B37F00E91832 /* SprayCan Transparent.png */,
 				CECE0BE228D687D90048C538 /* SteelBallMotion */,
 				224A431E28D61861008BEADC /* AppDelegate.swift */,
 				228FB93428D6767E009BAE57 /* Audio */,
@@ -75,8 +79,6 @@
 				A14F5C6528D61E74008D1427 /* Views */,
 				A14F5C5F28D61D26008D1427 /* Components */,
 				224A432428D61862008BEADC /* Assets.xcassets */,
-				368BF67728D69680003B6304 /* SprayCan_Transparent.png */,
-				368BF67928D69688003B6304 /* SprayCan_Transparent_pressed.png */,
 				A14F5C6128D61D39008D1427 /* Resources */,
 				A14F5C6028D61D31008D1427 /* Coordinators */,
 				224A432628D61862008BEADC /* Preview Content */,
@@ -111,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				368BF67328D642B0003B6304 /* Slider.swift */,
-				2261F0A528D626430018DB5D /* ButtonBar.swift */,
 				368BF67528D660EA003B6304 /* ColorPicker.swift */,
+				22C54D9E28D6B3ED00E91832 /* DrawingScreen.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				224A432028D61861008BEADC /* ContentView.swift */,
+				2261F0A528D626430018DB5D /* ButtonBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,11 +216,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368BF67A28D69688003B6304 /* SprayCan_Transparent_pressed.png in Resources */,
+				22C54D9B28D6B37700E91832 /* SprayCan Transparent pressed.png in Resources */,
 				224A432828D61862008BEADC /* Preview Assets.xcassets in Resources */,
-				368BF67828D69680003B6304 /* SprayCan_Transparent.png in Resources */,
 				228FB93628D676A5009BAE57 /* SpraySound.mp3 in Resources */,
 				224A432528D61862008BEADC /* Assets.xcassets in Resources */,
+				22C54D9D28D6B37F00E91832 /* SprayCan Transparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +233,7 @@
 			files = (
 				224A432128D61861008BEADC /* ContentView.swift in Sources */,
 				224A431F28D61861008BEADC /* AppDelegate.swift in Sources */,
+				22C54D9F28D6B3ED00E91832 /* DrawingScreen.swift in Sources */,
 				CECE0BE428D688020048C538 /* ballMotion.swift in Sources */,
 				A14F5C6328D61E58008D1427 /* Coordinator.swift in Sources */,
 				2261F0A628D626430018DB5D /* ButtonBar.swift in Sources */,
@@ -363,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GraffitexApp/Preview Content\"";
-				DEVELOPMENT_TEAM = GS638249K2;
+				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -378,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp2022;
+				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -394,7 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GraffitexApp/Preview Content\"";
-				DEVELOPMENT_TEAM = GS638249K2;
+				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -409,7 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp2022;
+				PRODUCT_BUNDLE_IDENTIFIER = Graffitex.GraffitexApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
