@@ -177,7 +177,7 @@ extension ARView {
         
         let anchorEntity = AnchorEntity(world:position)
         anchorEntity.addChild(modelEntity)
-        print(self.scene.anchors.?.position)
+//        print(self.scene.anchors.?.position)
         self.scene.addAnchor(anchorEntity)
         
     }
