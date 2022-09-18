@@ -162,22 +162,22 @@ extension ARView {
         
         let results = self.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .any)
         
-        if let firstResult = results.first {
-            let position = simd_make_float3(firstResult.worldTransform.columns.3)
-            placeCube(at:position)
-        }
+//        if let firstResult = results.first {
+//            let position = simd_make_float3(firstResult.worldTransform.columns.3)
+        placeCube()
+//        }
     }
     
-    func placeCube(at position: SIMD3<Float>){
+    func placeCube(){
         let mesh = MeshResource.generateSphere(radius: 0.01)
         let material = SimpleMaterial(color: .red, roughness: 0.3, isMetallic: true)
         let modelEntity = ModelEntity(mesh: mesh,materials: [material])
         
         modelEntity.generateCollisionShapes(recursive: true)
         
-        let anchorEntity = AnchorEntity(world:position)
+        let anchorEntity = AnchorEntity(world:self.cameraTransform.matrix)
         anchorEntity.addChild(modelEntity)
-//        print(self.scene.anchors.?.position)
+//        print()
         self.scene.addAnchor(anchorEntity)
         
     }
