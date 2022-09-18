@@ -9,9 +9,12 @@ import SwiftUI
 import RealityKit
 import ARKit
 import CoreMotion
+import Foundation
 
 struct DefaultsKeys {
     static let buttonPressed = "false"
+    static let color = "255,0,0"
+    static let thicc = "0.03"
 }
 
 struct ContentView : View {
@@ -186,8 +189,22 @@ extension ARView {
     }
     
     func placeCube(at position: SIMD3<Float>){
-        let mesh = MeshResource.generateSphere(radius: 0.01)
-        let material = SimpleMaterial(color: .red, roughness: 0.3, isMetallic: true)
+        
+        let defaults = UserDefaults.standard
+        var color = UIColor.red
+        if let colorStored = defaults.string(forKey: DefaultsKeys.color) {
+            var colorArray = colorStored.components(separatedBy: " ")
+            guard var r = Double(colorArray[1]) else {return}
+            guard var g = Double(colorArray[2]) else {return}
+            guard var b = Double(colorArray[3]) else {return}
+            color = UIColor.init(Color.init(red: r, green: g, blue: b))
+        }
+        var thickness:Float = 0.03
+        if let thiccStored = defaults.string(forKey: DefaultsKeys.thicc) {
+            thickness = Float(thiccStored)!
+        }
+        let mesh = MeshResource.generateSphere(radius: thickness)
+        let material = SimpleMaterial(color: color, roughness: 0.3, isMetallic: true)
         let modelEntity = ModelEntity(mesh: mesh,materials: [material])
         
         modelEntity.generateCollisionShapes(recursive: true)

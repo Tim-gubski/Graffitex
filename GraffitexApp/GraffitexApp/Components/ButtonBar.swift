@@ -152,7 +152,6 @@ struct ButtonBarUpper: View {
 
 
 struct ButtonBarLower: View {
-    
     var body: some View {
         HStack(alignment: .center, spacing: 50) {
 //            Button(action: {
