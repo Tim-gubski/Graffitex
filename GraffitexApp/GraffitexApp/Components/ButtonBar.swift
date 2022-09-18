@@ -8,27 +8,52 @@ struct ButtonBarUpper: View {
     @State private var player : CHHapticPatternPlayer?
     @State private var audioPlayer : AVAudioPlayer?
     @State private var vibrating = false
+    @State private var picName = "SprayCan_Transparent"
     
     var body: some View {
         HStack(alignment: .center, spacing: 50) {
             Button(action: {
                 
             }) {
-                Image("SprayCan_Transparent")
+                Image(picName)
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 400 , height: 250)
             }.simultaneousGesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ _ in
+<<<<<<< Updated upstream
                         startSpraying()
                     })
                     .onEnded({ _ in
                         stopSpraying()
+=======
+                        if(!vibrating){
+                            vibrating = true
+                            vibrate()
+                            startAudio()
+                            picName = "SprayCan_Transparent_pressed"
+                            print("starting vibration")
+                        }
+                    })
+                    .onEnded({ _ in
+                        do {
+                            if(vibrating){
+                                try player?.stop(atTime: CHHapticTimeImmediate)
+                                try audioPlayer?.stop()
+                                vibrating = false
+                                picName = "SprayCan_Transparent"
+                                print("killing vibration")
+                            }
+                        } catch let error {
+                            print("Error stopping the continuous haptic player: \(error)")
+                        }
+//                        print("unclicked")
+>>>>>>> Stashed changes
                     })
             )
             
         }
-        .padding(.bottom, 35)
+        //.padding(.bottom, 35)
         //.font(.system(size: 100))
         //.foregroundColor(.white)
         .frame(width: UIScreen.main.bounds.width, height: 80, alignment: .center)
