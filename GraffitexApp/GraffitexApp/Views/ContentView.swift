@@ -41,9 +41,9 @@ struct ContentView : View {
                 // Start accelerometer updates on a specific thread
                 manager.startAccelerometerUpdates(to: .main) { (data, error) in
                     if let accelerometerData = manager.accelerometerData {
-                        print(accelerometerData.acceleration.x,
-                              accelerometerData.acceleration.y,
-                              accelerometerData.acceleration.z)
+//                        print(accelerometerData.acceleration.x,
+//                              accelerometerData.acceleration.y,
+//                              accelerometerData.acceleration.z)
 //                        if(abs(accelerometerData.acceleration.x)>1.5 || abs(accelerometerData.acceleration.y)>1.5 ||
 //                           abs(accelerometerData.acceleration.z)>1.5){
 //                            print("MAKE NOISE")
@@ -148,7 +148,6 @@ struct ARViewContainer: UIViewRepresentable {
 }
 
 extension ARView {
-    
     func enableTapGesture(){
         let tapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
         self.addGestureRecognizer(tapGestureRecognizer)
@@ -156,7 +155,6 @@ extension ARView {
     
     @objc
     func handleTap(recognizer: UITapGestureRecognizer){
-        print("HANDLING")
 //        let tapLocation = recognizer.location(in: self)
         let tapLocation = self.center
         
@@ -179,7 +177,7 @@ extension ARView {
         
         let anchorEntity = AnchorEntity(world:position)
         anchorEntity.addChild(modelEntity)
-        
+        print(self.scene.anchors.?.position)
         self.scene.addAnchor(anchorEntity)
         
     }
