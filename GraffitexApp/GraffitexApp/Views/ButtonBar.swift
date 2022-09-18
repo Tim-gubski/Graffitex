@@ -25,13 +25,17 @@ struct ButtonBar: View {
             }.simultaneousGesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ _ in
+                        // this stuff runs when first clicking the button
                         if(!vibrating){
                             vibrating = true
                             vibrate()
+                            print("wtf?")
+                            startAudio()
                             print("starting vibration")
                         }
                     })
                     .onEnded({ _ in
+                        // this stuff runs when you let go of the button
                         do {
                             if(vibrating){
                                 try player?.stop(atTime: CHHapticTimeImmediate)
@@ -61,6 +65,32 @@ struct ButtonBar: View {
         .onAppear(perform:prepareHaptics)
     }
 
+
+    func startAudio(){
+        print("running!?")
+        // Load a sound file URL
+        guard let soundFileURL = Bundle.main.url(
+            forResource: "SpraySound", withExtension: "mp3"
+        ) else {
+            print("no sound?")
+            return
+        }
+        
+        do{
+            try AVAudioSession.sharedInstance().setCategory(
+                AVAudioSession.Category.soloAmbient
+            )
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            let audioPlayer = try AVAudioPlayer(contentsOf: soundFileURL)
+            audioPlayer.play()
+            print("sound?")
+        }catch{
+            print("error: \(error.localizedDescription)")
+        }
+        
+        
+    }
     
     func prepareHaptics(){
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
