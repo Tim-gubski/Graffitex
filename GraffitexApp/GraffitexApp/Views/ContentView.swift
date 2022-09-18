@@ -10,6 +10,10 @@ import RealityKit
 import ARKit
 import CoreMotion
 
+struct DefaultsKeys {
+    static let buttonPressed = "false"
+}
+
 struct ContentView : View {
     @State private var audioPlayer: AVAudioPlayer?
     @State private var y1: Double = 0.001
@@ -151,6 +155,15 @@ extension ARView {
     func enableTapGesture(){
         let tapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
         self.addGestureRecognizer(tapGestureRecognizer)
+        
+        Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { timer in
+            let defaults = UserDefaults.standard
+            if let buttonPressed = defaults.string(forKey: DefaultsKeys.buttonPressed) {
+                if(buttonPressed=="true"){
+                    self.placeCube()
+                }
+            }
+        }
     }
     
     @objc
@@ -162,10 +175,10 @@ extension ARView {
         
         let results = self.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .any)
         
-//        if let firstResult = results.first {
-//            let position = simd_make_float3(firstResult.worldTransform.columns.3)
-        placeCube()
-//        }
+        if let firstResult = results.first {
+            let position = simd_make_float3(firstResult.worldTransform.columns.3)
+            placeCube()
+        }
     }
     
     func placeCube(){

@@ -11,6 +11,7 @@ struct ButtonBarUpper: View {
     @State private var picName = "SprayCan_Transparent"
     
     var body: some View {
+        let defaults = UserDefaults.standard
         HStack(alignment: .center, spacing: 50) {
             Button(action: {
                 
@@ -23,6 +24,7 @@ struct ButtonBarUpper: View {
                     .onChanged({ _ in
                         if(!vibrating){
                             vibrating = true
+                            defaults.set("true", forKey: DefaultsKeys.buttonPressed)
                             vibrate()
                             startAudio()
                             picName = "SprayCan_Transparent_pressed"
@@ -35,6 +37,7 @@ struct ButtonBarUpper: View {
                                 try player?.stop(atTime: CHHapticTimeImmediate)
                                 try audioPlayer?.stop()
                                 vibrating = false
+                                defaults.set("false", forKey: DefaultsKeys.buttonPressed)
                                 picName = "SprayCan_Transparent"
                                 print("killing vibration")
                             }
