@@ -28,7 +28,7 @@ struct ColorPick: View {
 }
 
 struct Slide: View {
-    @State var sliderValue: Double = 0
+    @State var sliderValue: Double = 0.03
     let defaults = UserDefaults.standard
     var body: some View {
         HStack {

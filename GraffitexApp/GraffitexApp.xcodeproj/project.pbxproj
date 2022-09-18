@@ -31,6 +31,7 @@
 		224A432728D61862008BEADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2261F0A528D626430018DB5D /* ButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonBar.swift; path = ../Components/ButtonBar.swift; sourceTree = "<group>"; };
 		228C9CE128D6F30B002EC931 /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
+		228C9CE328D7289F002EC931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		228FB93528D676A5009BAE57 /* SpraySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpraySound.mp3; sourceTree = "<group>"; };
 		22C54D9A28D6B37700E91832 /* SprayCan Transparent pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SprayCan Transparent pressed.png"; sourceTree = "<group>"; };
 		22C54D9C28D6B37F00E91832 /* SprayCan Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SprayCan Transparent.png"; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		224A431D28D61861008BEADC /* GraffitexApp */ = {
 			isa = PBXGroup;
 			children = (
+				228C9CE328D7289F002EC931 /* Info.plist */,
 				22C54D9A28D6B37700E91832 /* SprayCan Transparent pressed.png */,
 				22C54D9C28D6B37F00E91832 /* SprayCan Transparent.png */,
 				CECE0BE228D687D90048C538 /* SteelBallMotion */,
@@ -374,9 +376,9 @@
 				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GraffitexApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -405,9 +407,9 @@
 				DEVELOPMENT_TEAM = 792KAN93AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GraffitexApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
