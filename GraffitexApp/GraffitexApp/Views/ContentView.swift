@@ -160,7 +160,11 @@ extension ARView {
             let defaults = UserDefaults.standard
             if let buttonPressed = defaults.string(forKey: DefaultsKeys.buttonPressed) {
                 if(buttonPressed=="true"){
-                    self.placeCube()
+                    let results = self.raycast(from: self.center, allowing: .estimatedPlane, alignment: .any)
+                    if let firstResult = results.first {
+                        let position = simd_make_float3(firstResult.worldTransform.columns.3)
+                        self.placeCube(at:position)
+                    }
                 }
             }
         }
@@ -177,11 +181,11 @@ extension ARView {
         
         if let firstResult = results.first {
             let position = simd_make_float3(firstResult.worldTransform.columns.3)
-            placeCube()
+//            placeCube()
         }
     }
     
-    func placeCube(){
+    func placeCube(at position: SIMD3<Float>){
         let mesh = MeshResource.generateSphere(radius: 0.01)
         let material = SimpleMaterial(color: .red, roughness: 0.3, isMetallic: true)
         let modelEntity = ModelEntity(mesh: mesh,materials: [material])
@@ -195,7 +199,7 @@ extension ARView {
                 [0,0,-1,1]
               )
         
-        let anchorEntity = AnchorEntity(world:self.cameraTransform.matrix*translate)
+        let anchorEntity = AnchorEntity(world:position)
         anchorEntity.addChild(modelEntity)
 //        print()
         self.scene.addAnchor(anchorEntity)
