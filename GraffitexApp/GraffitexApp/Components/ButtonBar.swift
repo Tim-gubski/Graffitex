@@ -14,7 +14,9 @@ struct ButtonBarUpper: View {
             Button(action: {
                 
             }) {
-                Image(systemName: "circle")
+                Image("SprayCan_Transparent")
+                    .resizable()
+                    .frame(width: 100, height: 100)
             }.simultaneousGesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ _ in
@@ -26,9 +28,9 @@ struct ButtonBarUpper: View {
             )
             
         }
-        .padding(.bottom, 15)
-        .font(.system(size: 100))
-        .foregroundColor(.white)
+        .padding(.bottom, 35)
+        //.font(.system(size: 100))
+        //.foregroundColor(.white)
         .frame(width: UIScreen.main.bounds.width, height: 80, alignment: .center)
         .background(Color.white.opacity(0.0))
         .opacity(0.87)

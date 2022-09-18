@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ColorPick: View {
-    @State private var bgColor = Color.red.opacity(0.0)
+    @State var bgColor = Color.red.opacity(0.0)
 
     var body: some View {
         VStack {
@@ -18,6 +18,24 @@ struct ColorPick: View {
                 .offset(x: 15)
         }
         .frame(width: 60)
-//        .background(bgColor)
+        //.background(bgColor)
+        //var selectedColor = $bgColor
+    }
+}
+
+struct Slide: View {
+    @State var sliderValue: Double = 0
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "circle.fill")
+                //.foregroundColor(selectedColor)
+                .font(.system(size: 15))
+                Slider(value: $sliderValue, in: 0...20, step: 1)
+                    .accentColor(Color.white)
+            Image(systemName: "circle.fill")
+                //.foregroundColor(selectedColor)
+                .font(.system(size: 35))
+        }.offset(x: -10)
     }
 }
