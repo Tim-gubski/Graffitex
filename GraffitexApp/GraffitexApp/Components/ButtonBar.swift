@@ -18,25 +18,10 @@ struct ButtonBarUpper: View {
             }.simultaneousGesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged({ _ in
-                        if(!vibrating){
-                            vibrating = true
-                            vibrate()
-                            startAudio()
-                            print("starting vibration")
-                        }
+                        startSpraying()
                     })
                     .onEnded({ _ in
-                        do {
-                            if(vibrating){
-                                try player?.stop(atTime: CHHapticTimeImmediate)
-                                try audioPlayer?.stop()
-                                vibrating = false
-                                print("killing vibration")
-                            }
-                        } catch let error {
-                            print("Error stopping the continuous haptic player: \(error)")
-                        }
-//                        print("unclicked")
+                        stopSpraying()
                     })
             )
             
@@ -48,6 +33,28 @@ struct ButtonBarUpper: View {
         .background(Color.white.opacity(0.0))
         .opacity(0.87)
         .onAppear(perform:prepareHaptics)
+    }
+    
+    func startSpraying(){
+        if(!vibrating){
+            vibrating = true
+            vibrate()
+            startAudio()
+            print("starting vibration")
+        }
+    }
+    
+    func stopSpraying(){
+        do {
+            if(vibrating){
+                try player?.stop(atTime: CHHapticTimeImmediate)
+                try audioPlayer?.stop()
+                vibrating = false
+                print("killing vibration")
+            }
+        } catch let error {
+            print("Error stopping the continuous haptic player: \(error)")
+        }
     }
     
     func startAudio(){
